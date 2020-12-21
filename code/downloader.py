@@ -105,13 +105,13 @@ class Downloader(object):
     def fetch_course_data_by_class_id(self, class_id):
         res = requests.get(
             url='https://api.skillshare.com/classes/{}'.format(class_id),
-            headers={
-                'Accept': 'application/vnd.skillshare.class+json;,version=0.8',
-                'User-Agent': 'Skillshare/5.3.0; Android 9.0.1',
-                'Host': 'api.skillshare.com',
-                'Referer': 'https://www.skillshare.com/',
-                'cookie': self.cookie,
-            }
+           headers={
+           'Accept': 'application/vnd.skillshare.class+json;,version=0.8',
+           'User-Agent': 'Skillshare/5.3.0; Android 9.0.1',
+           'Host': 'api.skillshare.com',
+           'Referer': 'https://www.skillshare.com/',
+           'cookie': self.cookie,
+       }
         )
 
         if not res.status_code == 200:
